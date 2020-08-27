@@ -1,38 +1,576 @@
-.App {
+/* GENERAL */
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: Quicksand, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADER */
+
+header {
+  background: #fff;
+
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+
+  height: 6rem;
+}
+
+header a,
+header ul,
+header .button {
+  width: 100%;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+header a {
+  display: flex;
+}
+
+header > a > img {
+  width: 4rem;
+  height: 4rem;
+
+  margin: auto 0;
+
+  margin-left: 84px;
+}
+
+header > ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+}
+
+header > ul > li > a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: #000000;
+}
+
+header > .button {
+  display: flex;
+  margin: auto;
+  justify-content: flex-end;
+}
+
+header > .button > button {
+  margin-right: 4rem;
+  padding: 12px 20px;
+  border: 1px solid #f7941e;
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  line-height: 22px;
+  background: #fafafa;
+  color: #f7941e;
+}
+
+header > .button > button:hover {
+  background: #f7941e;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+/* MAIN */
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+.main > .first {
+  width: 100%;
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main > .first > .first-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f2;
+}
+
+.content-first-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 27.063rem;
+  height: 25.688rem;
+}
+
+.content-first-left > h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 56px;
+  line-height: 69px;
+
+  color: #000000;
+}
+
+.content-first-left > p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  line-height: 140.62%;
+}
+
+.content-first-left > button {
+  width: 200px;
+  height: 60px;
+  left: 162px;
+
+  border: none;
+  background: #f7941e;
+  border-radius: 5px;
+
+  color: #ffffff;
+
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.content-first-left > button:hover {
+  background: #d87802;
+  cursor: pointer;
+}
+
+.main > .first > .first-right {
+  background-image: url(./assets/background.png);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+}
+
+/*************************************/
+
+.main > .second {
+  width: 100%;
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main > .second > .second-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f2;
+}
+
+.content-second-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 27.063rem;
+  height: 20.813rem;
+}
+
+.content-second-right > h3 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 32px;
+  line-height: 140.62%;
+
+  color: #000000;
+}
+
+.content-second-right > p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  line-height: 140.62%;
+  text-align: justify;
+}
+
+.content-second-right > button {
+  width: 200px;
+  height: 60px;
+  left: 162px;
+
+  background: none;
+  border-radius: 5px;
+
+  border: 1px solid #f7941e;
+  box-sizing: border-box;
+
+  color: #f7941e;
+
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.content-second-right > button:hover {
+  color: #f1f1f2;
+  background: #d87802;
+  cursor: pointer;
+}
+
+.main > .second > .second-left {
+  background-image: url(./assets/media.png);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.main > .third {
+  width: 100%;
+  height: 51.25rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main > .third > h3 {
+  font-family: "Quicksand";
+
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #000000;
+
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main > .third > p {
+  margin-top: -3%;
+
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 135.94%;
+  /* identical to box height, or 24px */
+
+  text-align: center;
+
+  color: #000000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main > .third > ul {
+  width: 100%;
+
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main > .third > ul > li {
+  /* display: block; */
+  width: 270px;
+  height: 436px;
+
+  background-color: #fafafa;
+}
+
+.main > .third > ul > li:hover {
+  cursor: pointer;
+  background: #ffffff;
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.05));
+}
+
+.main > .third > ul > li > a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Quicksand", sans-serif;
+}
+
+.main > .third > ul > li > a > h4 {
+  padding-top: 20px;
+  padding-left: 20px;
+  font-weight: 500;
+
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.main > .third > ul > li > a > span {
+  padding-bottom: 20px;
+  padding-left: 20px;
+
+  margin-top: 4.625rem;
+
+  display: flex;
+  flex-direction: column-reverse;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.main > .third > ul > li > a > span:hover {
+  color: #f7941e;
+}
+
+.fourth {
+  width: 100%;
+  height: 240px;
+
+  background: #f7941e;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.fourth > .fourth-left {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourth > .fourth-left > strong {
+  font-family: "Quicksand", sans-serif;
+  font-size: 32px;
+  line-height: 140.62%;
+}
+
+.fourth > .fourth-left > p {
+  font-family: Quicksand, sans-serif;
+  font-size: 32px;
+  line-height: 140.62%;
+}
+
+.fourth > .fourth-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 132px;
+}
+
+.fourth > .fourth-right > .btnn {
+  width: 200px;
+  height: 50px;
+  padding: 25px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  margin-right: 16px;
+
+  font-family: Quicksand, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.btn-left {
+  background: #231f20;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-right {
+  background: none;
+  border: 1px solid #000000;
+}
+
+.fifth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fifth > .texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 12rem;
+  margin-bottom: 3rem;
+}
+
+.fifth > .texts > h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.fifth > .texts > p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 135.94%;
+}
+
+.fifth > .principal-card {
+  display: flex;
+  background: #231f20;
+
+  width: 1170px;
+  height: 370px;
+}
+
+.fifth > .principal-card > .pc-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 4rem;
+
+  color: #ffffff;
+}
+
+.pc-content > span {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 140.62%;
+}
+
+.pc-content > h2 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.pc-content > p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 140.62%;
+}
+
+.pc-content > p:hover {
+  color: #f7941e;
+  cursor: pointer;
+}
+
+.fifth > .subcards {
+  display: flex;
+  margin-top: 2.5rem;
+  margin-bottom: 3.5rem;
+  width: 1170px;
+  height: 300px;
+  padding: 5px 0;
+}
+
+.fifth > .subcards > .card {
+  padding: 2.5rem;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.fifth > .subcards > .card:hover {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.card > strong {
+  font-size: 24px;
+  line-height: 140.62%;
+}
+
+.card > p {
+  font-size: 18px;
+  line-height: 140.62%;
+}
+
+.card > span {
+  font-size: 14px;
+  line-height: 140.62%;
+}
+
+.card > span:hover {
+  color: #f7941e;
+}
+
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  background: #fafafa;
 }
 
-.App-link {
-  color: #61dafb;
+footer > .links {
+  padding: 3rem 0 2rem 0;
+  width: 50%;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer > .links > li > a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 140.62%;
+  font-weight: 400;
+  color: #000;
+}
+
+footer > .links > li > a > img {
+  width: 100%;
+  height: 100%;
+}
+
+footer > .social {
+  margin-top: 3rem;
+  display: flex;
+  list-style: none;
+  width: 15%;
+  justify-content: space-between;
+}
+
+.copy {
+  font-size: 14px;
+  line-height: 140.62%;
+  font-weight: 500;
+  margin: 4rem 0 1.5rem 0;
+}
+
+.copy > button {
+  font-size: 14px;
+  line-height: 140.62%;
+  font-weight: 500;
+  background: none;
+  border: none;
+  margin-left: 1.4rem;
+}
+
+.copy > button:hover {
+  cursor: pointer;
+  color: #f7941e;
 }
